@@ -5,7 +5,6 @@ class TransactionsController < ApplicationController
 
 	def index
 		@transactions = @user.transactions
-		# binding.pry 
 		if @transactions.present?
 			render json:{
 				data:{

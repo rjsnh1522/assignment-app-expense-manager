@@ -5,7 +5,6 @@ class RegistrationsController < Devise::RegistrationsController
 
 	def create
 
-		# binding.pry
 		@email = params[:registerData][:email] if params[:registerData].present?
 
 		@user = User.find_by_email(@email) if @email.present?
